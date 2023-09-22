@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <main id="app"></main>
   </body>
+  <style>
+    :root {
+      --green: #52bfb9;
+      --blue: #16609c;
+      --yellow: #ffa61a;
+
+      --blue-gray-50: #eceff1;
+      --blue-gray-100: #cfd8dc;
+      --blue-gray-200: #b0bec5;
+      --blue-gray-300: #90a4ae;
+      --blue-gray-400: #78909c;
+      --blue-gray-500: #607d8b;
+      --blue-gray-600: #546e7a;
+      --blue-gray-700: #455a64;
+      --blue-gray-800: #37474f;
+      --blue-gray-900: #263238;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --blue-gray-1: var(--blue-gray-50);
+        --blue-gray-2: var(--blue-gray-100);
+        --blue-gray-3: var(--blue-gray-200);
+        --blue-gray-4: var(--blue-gray-300);
+        --blue-gray-5: var(--blue-gray-400);
+        --font-color: var(--blue-gray-900);
+        --box-shadow: #c9c9c9;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --blue-gray-1: var(--blue-gray-900);
+        --blue-gray-2: var(--blue-gray-800);
+        --blue-gray-3: var(--blue-gray-700);
+        --blue-gray-4: var(--blue-gray-600);
+        --blue-gray-5: var(--blue-gray-500);
+        --font-color: var(--blue-gray-50);
+        --box-shadow: #000;
+      }
+    }
+
+    @font-face {
+      font-family: "Roboto", sans-serif;
+      src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-size: 10pt;
+      font-family: "Comic Neue", cursive;
+    }
+  </style>
 </html>

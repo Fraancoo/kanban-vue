@@ -1,27 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="main_container">
+    <div class="div_title">
+      <h1 class="title">Kanban</h1>
+    </div>
+    <div class="div_content">
+      <section id="sect_todo">
+        <div>
+          <h2 class="subtitle">To Do</h2>
+        </div>
+      </section>
+      <div class="h_line"></div>
+      <section id="sect_doing">
+        <div>
+          <h2 class="subtitle">Doing</h2>
+        </div>
+      </section>
+      <div class="h_line"></div>
+      <section id="sect_done">
+        <div>
+          <h2 class="subtitle">Done</h2>
+        </div>
+      </section>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+<script lang="ts" setup></script>
 
-export default defineComponent({
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-});
-</script>
+<style scoped>
+.main_container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--blue-gray-1);
+}
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.div_title {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 0 3px var(--box-shadow);
+}
+
+.title {
+  font-size: 3rem;
+  user-select: none;
+}
+
+.div_content {
+  height: calc(100% - 100px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.h_line {
+  height: 100%;
+  widows: 30px;
+  border: 1px solid var(--yellow);
 }
 </style>
