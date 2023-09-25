@@ -7,6 +7,7 @@
       <section id="sect_todo">
         <div>
           <h2 class="subtitle">To Do</h2>
+          <div class="add_postit"></div>
         </div>
       </section>
       <div class="h_line"></div>
@@ -49,13 +50,19 @@
 
 .div_content {
   height: calc(100% - 100px);
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
 
+.div_content > section {
+  width: 100%;
+  text-align: center;
+}
 .h_line {
   height: 100%;
   widows: 30px;
-  border: 1px solid var(--yellow);
+  border: 3px solid var(--yellow);
+  border-radius: 3px;
 }
 </style>
